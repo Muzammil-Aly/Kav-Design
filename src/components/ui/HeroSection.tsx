@@ -26,7 +26,7 @@ export default function HeroSection() {
 
   const [index, setIndex] = useState(0);
   const [wordWidth, setWordWidth] = useState(0);
-  const wordRefs = useRef([]);
+  const wordRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const [isMobile, setIsMobile] = useState(false);
 
   // Check if mobile for responsive positioning
@@ -432,7 +432,7 @@ export default function HeroSection() {
             >
               {/* Hidden span to measure word width */}
               <span
-                ref={(el) => (wordRefs.current[index] = el)}
+                ref={(el) => { wordRefs.current[index] = el; }}
                 className="absolute font-[400] text-[clamp(40px,5vw,72px)] tracking-tight leading-[-1.651px] opacity-0 pointer-events-none"
                 style={{
                   fontFamily: "Bw Gradual DEMO",

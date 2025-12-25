@@ -606,7 +606,7 @@ export default function SmartSearch() {
     setQuery(kw);
     setSuggestions([]);
     const found = allKeywords.find((item) => item.keyword === kw);
-    if (found) setSelectedKeyword(dataMap[found.category]);
+    if (found) setSelectedKeyword(dataMap[found.category as keyof typeof dataMap]);
   };
 
   return (
@@ -647,12 +647,12 @@ export default function SmartSearch() {
             }
           </h3>
 
-          {selectedKeyword.modules.map((mod, i) => (
+          {selectedKeyword.modules.map((mod: any, i: number) => (
             <div key={i} className="mt-4 border rounded-lg p-4 bg-blue-500">
               <h4 className="font-semibold text-gray-800">{mod.name}</h4>
               <table className="w-full mt-2 border-t border-gray-200 text-sm">
                 <tbody>
-                  {mod.features.map((f, j) => (
+                  {mod.features.map((f: any, j: number) => (
                     <tr key={j} className="border-b border-gray-200">
                       <td className="py-2 font-medium text-gray-700 w-1/3">
                         {f.name}

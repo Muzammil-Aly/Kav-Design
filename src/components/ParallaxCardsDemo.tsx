@@ -30,7 +30,7 @@ const cardData: {
     icon: <CalendarIcon className="w-8 h-8" />,
     lightBg: "bg-black text-white",
     darkBg: "dark:bg-white dark:text-black",
-    variant: "success",
+    variant: "default",
   },
   {
     title: "Privacy First",
@@ -39,7 +39,7 @@ const cardData: {
     icon: <ShieldCheckIcon className="w-8 h-8" />,
     lightBg: "bg-white text-black",
     darkBg: "dark:bg-black dark:text-white",
-    variant: "gradient",
+    variant: "secondary",
   },
   {
     title: "AI Suggestions",
@@ -48,7 +48,7 @@ const cardData: {
     icon: <BrainIcon className="w-8 h-8" />,
     lightBg: "bg-black text-white",
     darkBg: "dark:bg-white dark:text-black",
-    variant: "light",
+    variant: "outline",
   },
   {
     title: "Cloud Sync",
@@ -57,7 +57,7 @@ const cardData: {
     icon: <CloudIcon className="w-8 h-8" />,
     lightBg: "bg-white text-black",
     darkBg: "dark:bg-black dark:text-white",
-    variant: "dark",
+    variant: "ghost",
   },
   {
     title: "Integrates Easily",
@@ -66,7 +66,7 @@ const cardData: {
     icon: <PlugIcon className="w-8 h-8" />,
     lightBg: "bg-black text-white",
     darkBg: "dark:bg-white dark:text-black",
-    variant: "warning",
+    variant: "default",
   },
   {
     title: "Team Ready",
@@ -75,7 +75,7 @@ const cardData: {
     icon: <UsersIcon className="w-8 h-8" />,
     lightBg: "bg-white text-black",
     darkBg: "dark:bg-black dark:text-white",
-    variant: "success",
+    variant: "secondary",
   },
 ];
 

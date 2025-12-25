@@ -1063,7 +1063,7 @@ export default function FeatureMatrixMap() {
 
       parsed = JSON.parse(cleaned);
     } else {
-      parsed = tableContent.generatedText || tableContent;
+      parsed = (tableContent as any).generatedText || tableContent;
     }
 
     // --- Validate parsed data structure ---
@@ -1105,7 +1105,7 @@ export default function FeatureMatrixMap() {
   );
 
   // --- Group by module ---
-  const grouped = features.reduce((acc: Record<string, any[]>, curr) => {
+  const grouped = features.reduce((acc: Record<string, any[]>, curr: any) => {
     if (!acc[curr.module]) acc[curr.module] = [];
     acc[curr.module].push(curr);
     return acc;
@@ -1158,14 +1158,14 @@ export default function FeatureMatrixMap() {
             </thead>
             <tbody>
               {Object.entries(grouped).map(
-                ([moduleName, moduleFeatures], groupIdx, arr) => (
+                ([moduleName, moduleFeatures]: [string, any], groupIdx, arr) => (
                   <React.Fragment key={moduleName}>
-                    {moduleFeatures.map((f: any, idx: number) => (
+                    {(moduleFeatures as any[]).map((f: any, idx: number) => (
                       <tr key={f.feature}>
                         {idx === 0 && (
                           <td
                             className="py-8 align-top text-black font-medium"
-                            rowSpan={moduleFeatures.length}
+                            rowSpan={(moduleFeatures as any[]).length}
                           >
                             {moduleName}
                           </td>

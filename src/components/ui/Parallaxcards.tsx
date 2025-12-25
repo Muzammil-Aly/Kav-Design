@@ -1,13 +1,21 @@
 import StackingCards from "@/components/ui/StackingCards";
 
-const Index = () => {
+interface ParallaxCardsProps {
+  cards?: Array<{
+    lightBg: string;
+    darkBg: string;
+    content: React.ReactElement;
+  }>;
+}
+
+const Index = ({ cards }: ParallaxCardsProps) => {
   return (
-    <div className=""> 
+    <div className="">
 
       {/* Stacking Cards Section */}
       <StackingCards/>
 
-      {/* Next Section */} 
+      {/* Next Section */}
     </div>
   );
 };

@@ -293,10 +293,6 @@ export default function SingleUnicornCard() {
     </div>
   );
 }
-"use client";
-
-import React from "react";
-import { Lock, Heart } from "react-feather";
 
 export const chemcoTab = {
   url: "Chemco | Medcharts.com",
@@ -497,5 +493,52 @@ export function TabCardBody({ tab = chemcoTab }: TabCardBodyProps) {
                 viewBox="0 0 77 5"
                 fill="none"
               >
-                <rect width="76.8651" height "4.71342" fill="#E9EDF8" />
-
+                <rect width="76.8651" height="4.71342" fill="#E9EDF8" />
+                <path
+                  d="M19.2172 2.33261C19.2172 1.84554 19.612 1.45068 20.0991 1.45068H44.3433C44.884 1.45068 45.3223 1.88897 45.3223 2.42963C45.3223 3.09043 44.7866 3.62611 44.1258 3.62611H20.5107C19.7963 3.62611 19.2172 3.04699 19.2172 2.33261Z"
+                  fill="url(#paint0_linear_0_609)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_0_609"
+                    x1="19.2172"
+                    y1="2.5384"
+                    x2="45.3223"
+                    y2="2.5384"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stopColor="#EEF2FC" />
+                    <stop offset="1" stopColor="#0778E0" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div className="relative mt-2 mb-2 flex h-[76.783px] w-[220.344px] flex-shrink-0 items-center rounded-[4.713px] bg-gradient-to-r from-[#EBEFFA] to-[#E9EDF8] px-[5.202px] py-[2.175px] shadow-[0_0_0_0.544px_#E9EBF1,0_1.088px_2.538px_0_rgba(128,136,151,0.16),0_0.363px_0.725px_0_rgba(102,109,128,0.2)]">
+              <div className="flex h-[64.175px] w-[210.344px] flex-shrink-0 flex-col justify-center rounded-[4.713px] border-[0.363px] border-[#79B1E6] bg-white px-[9.202px] pr-0 shadow-[0_13.053px_51.485px_0_rgba(6,11,19,0.06),0_13.053px_34.807px_0_rgba(109,80,224,0.03)]">
+                <p className="bg-gradient-to-r from-[#000000] via-[#000000] to-[#3099FF] bg-clip-text font-[Arimo] text-[16.574px] font-[400] leading-[23.677px] text-transparent">
+                  {tab.result}
+                </p>
+                <p className="flex flex-shrink-0 flex-col justify-center font-[Arimo] text-[11.818px] font-[400] leading-[16.882px] text-[#6A7282]">
+                  {tab.result2}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex h-[56.199px] w-[152.28px] flex-col items-start gap-[5.507px] rounded-[11.013px] border-[0.551px] border-[#0EA5E9] bg-white px-[5.564px] pt-[11.564px] pb-[0.551px]">
+            <p className="h-[15.24px] w-[152.596px] flex-shrink-0 bg-gradient-to-r from-black to-[#2EB5F2] bg-clip-text text-[10.152px] font-[400] leading-[11.013px] text-transparent">
+              {tab.badge2}
+            </p>
+            <div className="flex items-center gap-2">
+              <p className="font-[Arimo] text-[9.494px] font-[400] leading-[13.563px] text-[#FF6900]">
+                ⟨/⟩
+              </p>
+              <p className="h-[11.24px] w-[106.596px] flex-shrink-0 font-[Inter] text-[9.636px] font-[700] leading-[13.766px] text-[#0A0A0A]">
+                {tab.badge2line}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

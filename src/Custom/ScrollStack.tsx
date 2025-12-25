@@ -26,7 +26,7 @@ export const ScrollStackItem: React.FC<ScrollStackItemProps> = ({
 
 interface ScrollStackProps {
   className?: string;
-  slide;
+  slide?: any;
   children: ReactNode;
   itemDistance?: number;
   itemScale?: number;
@@ -253,10 +253,10 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
     if (!scroller && !useWindowScroll) return;
 
     const lenis = new Lenis({
-      wrapper: useWindowScroll ? undefined : scroller,
+      wrapper: useWindowScroll ? undefined : (scroller || undefined),
       content: useWindowScroll
         ? undefined
-        : (scroller?.querySelector(".scroll-stack-inner") as HTMLElement),
+        : (scroller?.querySelector(".scroll-stack-inner") as HTMLElement | undefined),
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
